@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEVAURA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              earth: {
+                50: '#fcfbf7',
+                100: '#f7f6ec',
+                200: '#e9e6d3',
+                300: '#dad5b5',
+                400: '#c5bd91',
+                500: '#b0a672',
+                600: '#9b905f',
+                700: '#7f754e',
+                800: '#686043',
+                900: '#565039',
+              },
+              discord: {
+                dark: '#36393f',
+                darker: '#2f3136',
+                darkest: '#202225',
+                light: '#40444b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes gradient-flow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .dynamic-bg-light {
+        background: linear-gradient(-45deg, #fcfbf7, #e9e6d3, #f7f6ec, #dad5b5);
+        background-size: 400% 400%;
+        animation: gradient-flow 20s ease infinite;
+      }
+
+      .dynamic-bg-dark {
+        background: linear-gradient(-45deg, #202225, #2f3136, #1e2329, #18191c);
+        background-size: 400% 400%;
+        animation: gradient-flow 20s ease infinite;
+      }
+
+      /* Custom Scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc; 
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #40444b; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #bbb; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #4f545c; 
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-earth-100 text-earth-900 dark:bg-discord-darkest dark:text-gray-200 transition-colors duration-200">
+    <div id="root"></div>
+  </body>
+</html>

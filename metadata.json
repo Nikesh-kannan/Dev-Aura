@@ -1,0 +1,9 @@
+{
+  "name": "DEVAURA",
+  "description": "A personalized, AI-driven web application for computer science upskilling featuring real-time code context synchronization, adaptive learning paths, and Gemini Live integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
